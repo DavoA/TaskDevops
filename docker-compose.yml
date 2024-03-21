@@ -9,7 +9,7 @@ services:
     networks:
       - network-backend
   api:
-    image: "parandzem/back:d5ac895"
+    image: "parandzem/back:"
     depends_on:
       - mongo
     ports:
