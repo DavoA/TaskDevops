@@ -11,6 +11,6 @@ fi
 
 new_tag="latest"
 
-sed -i "s/parandzem\/front:$current_tag/parandzem\/front:$new_tag/g" $DOCKER_COMPOSE_FILE
+sed -i "s/parandzem\/back:$current_tag/parandzem\/back:$new_tag/g" $DOCKER_COMPOSE_FILE
 
-echo "Tag for 'parandzem/front' image in the Docker Compose file has been updated from $current_tag to $new_tag."
+echo "Tag for 'parandzem/back' image in the Docker Compose file has been updated from $current_tag to $new_tag."
