@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   web:
-    image: "parandzem/front:a6d6c06"
+    image: "parandzem/front:740df10"
     depends_on:
       - api
     ports:
