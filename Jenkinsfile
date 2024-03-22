@@ -12,14 +12,14 @@ pipeline {
     stage('Docker Compose Down') {
       steps {
         script {
-          sh '/usr/bin/docker-compose down'
+          sh '/usr/bin/docker-compose down -d'
         }
       }
     }
     stage('Docker Compose Up') {
       steps {
         script {
-          sh '/usr/bin/docker-compose up'
+          sh '/usr/bin/docker-compose up -d'
         }
       }
     }
