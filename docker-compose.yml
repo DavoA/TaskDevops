@@ -1,7 +1,8 @@
 version: "3.8"
 services:
   web:
-    image: "parandzem/front:eb8f109"
+    image: "parandzem/front:blabla"
+    env_file: front.env
     depends_on:
       - api
     ports:
@@ -9,7 +10,8 @@ services:
     networks:
       - network-backend
   api:
-    image: "parandzem/back:8012f0c"
+    image: "parandzem/back:blabla"
+    env_file: back.env
     depends_on:
       - mongo
     ports:
@@ -19,16 +21,12 @@ services:
   
   mongo:
     image: mongo
+    env_file: docker.env
     restart: always
     volumes: 
       - mongodb_data:/data/db
-    env_file: docker.env
-    environment: 
-      MONGODB_INITDB_ROOT_USERNAME: ${MONGO_USER}
-      MONGODB_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
     ports:
-       - 27117:27017
-
+       - 27017:27017
 networks:
   network-backend:
 
